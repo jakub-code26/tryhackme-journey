@@ -51,3 +51,13 @@ Event ID: Which Event ID is associated with Process Execution activity? In this 
 NewProcessName: Which process name will be helpful to include in the rule?
 Rule: If Log Source is WinEventLog AND EventCode is 4688, and NewProcessName contains whoami, then Trigger an ALERT WHOAMI command Execution DETECTED
 
+
+# Splunk : The basics 
+
+## Splunk has 3 main components 
+
+### Splunk Forwarder : Splunk Forwarder is a lightweight agent installed on the endpoint intended to be monitored, and its main task is to collect the data and send it to the Splunk instance.
+
+### Splunk Indexer : Splunk Indexer plays the main role in processing the data it receives from forwarders. It parses and normalizes the data into field-value pairs, categorizes it, and stores the results as events, making the processed data easy to search and analyze.
+
+### Search Data : Splunk Search Head is the place within the Search & Reporting App where users can search the indexed logs. He searches are done using the SPL (Search Processing Language), a powerful query language for searching indexed data. When the user performs a search, the request is sent to the indexer, and the relevant events are returned as field-value pairs.
